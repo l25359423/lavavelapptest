@@ -365,6 +365,6 @@ class userController extends Controller
     }
 
     public function testRedirect(){
-        return Session::get("info","暂无数据啊");
+        return Session::get("info","暂无数据啊1");
     }
 }
