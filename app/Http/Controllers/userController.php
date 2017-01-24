@@ -367,4 +367,19 @@ class userController extends Controller
     public function testRedirect(){
         return Session::get("info","暂无数据啊1111");
     }
+
+    public function activity0(){
+        return "活动快要开始了，敬请期待";
+    }
+
+    public function activity1(){
+        return "活动1进行中。。。";
+    }
+
+    public function activity2(){
+        return "活动2进行中。。。";
+    }
+
+    public function test(){
+    }
 }

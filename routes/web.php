@@ -86,3 +86,16 @@ Route::group(["middleware" => ['web']], function(){
 
 Route::any("response","userController@response");
 Route::any("testRedirect",['as'=> 'testRedirect','uses' => 'userController@testRedirect']);
+
+Route::any("activity0","userController@activity0");
+
+Route::group(["middleware" => ['activity']], function(){
+    Route::any("activity1","userController@activity1");
+    Route::any("activity2","userController@activity2");
+});
+
+Route::any("test","userController@test");
+
+Route::any("student/index", ['uses' => 'studentController@index']);
+Route::any("student/create", ['uses' => 'studentController@create']);
+Route::any("student/save", ['uses' => 'studentController@save']);
